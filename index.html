@@ -69,3 +69,114 @@
       text-transform: uppercase;
       font-size: 12px;
       color: var(--muted);
+      margin:0 0 6px;
+    }
+    h1{
+      margin:0 0 6px;
+      font-size: clamp(28px, 3.4vw, 44px);
+    }
+    .sub{
+      margin: 0 0 14px;
+      font-size: 17px;
+      color: var(--muted);
+      line-height:1.4;
+    }
+    .ctaRow{
+      display:flex;
+      gap:10px;
+      flex-wrap: wrap;
+    }
+    .btn{
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      text-decoration:none;
+      font-weight: 650;
+    }
+    .btnPrimary{
+      background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 100%);
+      color:#1b130b;
+    }
+    .btnGhost{ background: rgba(0,0,0,.22); }
+
+    .section{
+      margin: 18px auto 0;
+      background: rgba(23, 19, 15, .78);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+    }
+    .sectionInner{ padding: 22px 18px; }
+    .title{ font-size: 22px; margin: 0 0 10px; }
+    .p{ color: var(--muted); line-height: 1.6; font-size: 16px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .card{
+      background: rgba(0,0,0,.25);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .callout{
+      text-align:center;
+      padding: 22px;
+      background: rgba(0,0,0,.25);
+    }
+    footer{
+      padding: 18px 0 28px;
+      font-size: 13px;
+      text-align:center;
+      color: rgba(214,200,181,.75);
+    }
+    @media (max-width: 740px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="hero">
+      <img src="happy-barker-hero.png" alt="Happy and Barker together in the barn" />
+      <div class="heroContent">
+        <div class="heroCard">
+          <p class="kicker">Living in the Barn of Loneliness</p>
+          <h1>Rescue Happy & Barker</h1>
+          <p class="sub">
+            Two bonded dogs who only have each other right now. Gentle. Loyal. Safe together.
+            They deserve warmth, love, and a forever home.
+          </p>
+          <div class="ctaRow">
+            <a class="btn btnPrimary" href="mailto:yes@rescuehappyandbarker.com">Email to Help</a>
+            <a class="btn btnGhost" href="tel:+19104599771">Call 910-459-9771</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="section">
+      <div class="sectionInner">
+        <h2 class="title">Their Story</h2>
+        <p class="p">
+          Happy and Barker are two bonded dogs living in what we call the <strong>Barn of Loneliness</strong>.
+          They rely on each other for comfort and safety.
+        </p>
+        <div class="grid">
+          <div class="card"><strong>Happy</strong><br/>Gentle, loyal, quietly hopeful.</div>
+          <div class="card"><strong>Barker</strong><br/>Protective, calm, never leaves Happy’s side.</div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      RescueHappyAndBarker.com · yes@rescuehappyandbarker.com · (910) 459-9771
+    </footer>
+
+  </div>
+</body>
+</html>
