@@ -19,7 +19,6 @@
       --radius: 18px;
       --max: 980px;
     }
-
     *{ box-sizing:border-box; }
     body{
       margin:0;
@@ -27,17 +26,14 @@
       background: radial-gradient(1200px 800px at 30% -10%, #2b2118 0%, var(--bg) 55%);
       color: var(--text);
     }
-
     a{ color: inherit; }
     .wrap{ width:min(var(--max), 92vw); margin:0 auto; }
 
-    /* HERO */
     .hero{
       margin: 24px auto 0;
       border-radius: var(--radius);
       overflow:hidden;
       box-shadow: var(--shadow);
-      background: #000;
       position: relative;
     }
     .hero img{
@@ -51,7 +47,6 @@
       content:"";
       position:absolute; inset:0;
       background: linear-gradient(180deg, rgba(0,0,0,.10) 0%, rgba(0,0,0,.55) 55%, rgba(0,0,0,.80) 100%);
-      pointer-events:none;
     }
     .heroContent{
       position:absolute;
@@ -67,245 +62,10 @@
       border: 1px solid rgba(255,255,255,.10);
       backdrop-filter: blur(6px);
       border-radius: 16px;
-      padding: 18px 18px 16px;
+      padding: 18px;
     }
     .kicker{
       letter-spacing: .12em;
       text-transform: uppercase;
       font-size: 12px;
       color: var(--muted);
-      margin:0 0 6px;
-    }
-    h1{
-      margin:0 0 6px;
-      font-size: clamp(28px, 3.4vw, 44px);
-      line-height:1.05;
-    }
-    .sub{
-      margin: 0 0 14px;
-      font-size: clamp(15px, 1.7vw, 18px);
-      color: var(--muted);
-      line-height:1.4;
-    }
-    .ctaRow{
-      display:flex;
-      gap:10px;
-      flex-wrap: wrap;
-      margin-top: 10px;
-    }
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,.14);
-      text-decoration:none;
-      font-weight: 650;
-      letter-spacing: .01em;
-      transition: transform .08s ease, background .15s ease, border-color .15s ease;
-      user-select:none;
-    }
-    .btn:hover{ transform: translateY(-1px); }
-    .btnPrimary{
-      background: linear-gradient(180deg, var(--accent) 0%, var(--accent2) 100%);
-      color:#1b130b;
-      border-color: rgba(0,0,0,.25);
-    }
-    .btnGhost{
-      background: rgba(0,0,0,.22);
-    }
-
-    /* SECTIONS */
-    .section{
-      margin: 18px auto 0;
-      background: rgba(23, 19, 15, .78);
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: var(--radius);
-      box-shadow: 0 18px 40px rgba(0,0,0,.25);
-      overflow:hidden;
-    }
-    .sectionInner{ padding: 22px 18px; }
-    .title{
-      font-size: 22px;
-      margin: 0 0 10px;
-      letter-spacing:.01em;
-    }
-    .p{
-      margin: 0 0 12px;
-      color: var(--muted);
-      line-height: 1.6;
-      font-size: 16px;
-    }
-
-    .grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-top: 10px;
-    }
-    .card{
-      background: linear-gradient(180deg, rgba(42,31,23,.55), rgba(15,13,10,.35));
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 16px;
-      padding: 16px;
-    }
-    .card h3{
-      margin:0 0 8px;
-      font-size: 18px;
-    }
-    .bullets{
-      margin:0;
-      padding-left: 18px;
-      color: var(--muted);
-      line-height: 1.6;
-    }
-
-    .callout{
-      text-align:center;
-      padding: 22px 18px;
-      background:
-        radial-gradient(800px 200px at 50% 0%, rgba(216,161,93,.18), transparent 60%),
-        rgba(0,0,0,.18);
-      border-top: 1px solid rgba(255,255,255,.08);
-    }
-    .callout .big{
-      font-size: clamp(18px, 2.3vw, 26px);
-      margin: 0 0 10px;
-      line-height:1.25;
-    }
-
-    footer{
-      padding: 18px 0 28px;
-      color: rgba(214,200,181,.75);
-      font-size: 13px;
-      text-align:center;
-    }
-
-    /* Responsive */
-    @media (max-width: 740px){
-      .grid{ grid-template-columns: 1fr; }
-      .hero img{ height: min(68vh, 600px); }
-    }
-  </style>
-</head>
-
-<body>
-  <div class="wrap">
-
-    <!-- HERO -->
-    <header class="hero" id="top">
-      <!-- Upload your generated hero image to the repo as: happy-barker-hero.png -->
-      <img src="happy-barker-hero.png" alt="Happy and Barker together in the barn" />
-      <div class="heroContent">
-        <div class="heroCard">
-          <p class="kicker">Living in the Barn of Loneliness</p>
-          <h1>Rescue Happy &amp; Barker</h1>
-          <p class="sub">
-            Two bonded dogs who only have each other right now. Gentle. Loyal. Safe together.
-            They deserve warmth, love, and a forever home.
-          </p>
-
-          <div class="ctaRow">
-            <a class="btn btnPrimary" href="#share">Share Their Story</a>
-            <a class="btn btnGhost" href="#help">Help Find a Home</a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <!-- STORY -->
-    <section class="section" id="story">
-      <div class="sectionInner">
-        <h2 class="title">Their Story</h2>
-        <p class="p">
-          Happy and Barker are two dogs living in what we call the <strong>Barn of Loneliness</strong>.
-          They rely on each other for comfort and safety.
-        </p>
-        <p class="p">
-          Despite everything, they remain gentle and bonded. They deserve a safe place to sleep,
-          kind people, and a real chance — together.
-        </p>
-
-        <div class="grid">
-          <div class="card">
-            <h3>Happy</h3>
-            <ul class="bullets">
-              <li>Loyal and gentle</li>
-              <li>Quiet, thoughtful energy</li>
-              <li>Finds comfort staying close to Barker</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Barker</h3>
-            <ul class="bullets">
-              <li>Protective and calm</li>
-              <li>Watches over Happy</li>
-              <li>Bonded companion — they do best together</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div class="callout" id="help">
-        <p class="big"><strong>They don’t need much.</strong><br/>Just someone who won’t leave them behind.</p>
-        <div class="ctaRow" style="justify-content:center;">
-          <!-- Replace the email below with the right contact -->
-          <a class="btn btnPrimary" href="mailto:your-email@example.com?subject=Happy%20%26%20Barker%20%E2%80%93%20I%20want%20to%20help">Email to Help</a>
-          <a class="btn btnGhost" href="#share">Share</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- SHARE -->
-    <section class="section" id="share">
-      <div class="sectionInner">
-        <h2 class="title">Share Their Story</h2>
-        <p class="p">
-          The fastest way to help is to share this page. Every share increases the chances that the right person sees them.
-        </p>
-
-        <div class="ctaRow">
-          <a class="btn btnPrimary" href="#" id="copyLinkBtn">Copy Website Link</a>
-          <!-- This Facebook share link works once your custom domain is connected; it will still share the GitHub URL fine. -->
-          <a class="btn btnGhost" href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener" id="fbShare">Share on Facebook</a>
-        </div>
-
-        <p class="p" style="margin-top:12px;">
-          Website: <span id="siteUrl" style="color: var(--text); font-weight:650;"></span>
-        </p>
-      </div>
-    </section>
-
-    <footer>
-      <div class="wrap">
-        <div>RescueHappyAndBarker.com</div>
-      </div>
-    </footer>
-
-  </div>
-
-  <script>
-    // Fill in the site URL automatically
-    const url = window.location.href.replace(/#.*$/, "");
-    document.getElementById("siteUrl").textContent = url;
-
-    // Update the Facebook share link with the current URL
-    const fb = document.getElementById("fbShare");
-    fb.href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(url);
-
-    // Copy link button
-    document.getElementById("copyLinkBtn").addEventListener("click", async (e) => {
-      e.preventDefault();
-      try {
-        await navigator.clipboard.writeText(url);
-        e.target.textContent = "Copied!";
-        setTimeout(() => (e.target.textContent = "Copy Website Link"), 1400);
-      } catch {
-        alert("Copy didn’t work in this browser. You can manually copy the URL from the address bar.");
-      }
-    });
-  </script>
-</body>
-</html>
